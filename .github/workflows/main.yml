@@ -1,19 +1,23 @@
-name: CI
+name: Access PC
 
-on: [push]
+on:
+
+  push:
+
+    branches: [ main ]
 
 jobs:
 
-  build:
+  access-pc:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
 
-      - uses: actions/checkout@master
+      - name: Checkout code
 
-      - name: Setup tmate session
+        uses: actions/checkout@v2
 
-      uses: mxschmitt/action-tmate@master
+      - name: Access PC
 
-      
+        run: | ssh user@85.140.118.123
