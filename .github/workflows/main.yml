@@ -20,4 +20,5 @@ jobs:
 
       - name: Access PC
 
-        run: | ssh user@85.140.118.123
+        run: |
+        ssh user@85.140.118.123
